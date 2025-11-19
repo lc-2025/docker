@@ -1,0 +1,10 @@
+FROM golang:latest
+WORKDIR /usr/src/app
+COPY . .
+ENV REQUEST_ORIGIN=http://localhost
+ENV REDIS_HOST=redis
+ENV POSTGRES_HOST=postgres
+ENV POSTGRES_PASSWORD=example
+RUN go build
+EXPOSE 8080
+CMD ["./server"]
