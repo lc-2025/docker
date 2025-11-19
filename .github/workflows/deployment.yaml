@@ -27,4 +27,4 @@ jobs:
       with:
         context: ./material-applications/express-app
         push: true
-        tags: ${{ vars.DOCKER_USERNAME }}/beermapping:latest
+        tags: ${{ vars.DOCKER_USERNAME }}/express-app:latest
