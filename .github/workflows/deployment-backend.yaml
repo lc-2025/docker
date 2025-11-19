@@ -52,6 +52,8 @@ jobs:
           subject-name: ${{ env.IMAGE_NAME}}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
+          registry-username: ${{ vars.DOCKER_USERNAME }}
+          registry-password: ${{ secrets.DOCKER_PAT }}
   deploy:
     runs-on: ubuntu-latest
     permissions:
